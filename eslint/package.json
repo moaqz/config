@@ -1,0 +1,20 @@
+{
+  "name": "eslint-config-moaqz",
+  "description": "moaqz's ESLint config",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "index.js",
+  "author": "moaqz",
+  "keywords": [
+    "eslint-config"
+  ],
+  "peerDependencies": {
+    "eslint": "^9.16.0"
+  },
+  "dependencies": {
+    "@html-eslint/eslint-plugin": "^0.31.1",
+    "@html-eslint/parser": "^0.31.0",
+    "eslint-plugin-unicorn": "^56.0.1",
+    "neostandard": "^0.12.0"
+  }
+}
