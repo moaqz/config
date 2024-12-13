@@ -17,6 +17,7 @@ const STYLISTIC_RULES = {
  */
 const ESLINT_RULES = {
   "prefer-template": "error",
+  "no-console": ["error", { allow: ["warn"] }]
 };
 
 /**
@@ -82,7 +83,7 @@ const HTML_CONFIG = {
 };
 
 export default [
-  ...neostandard(),
+  ...neostandard({ ts: true }),
   UNICORN_CONFIG,
   HTML_CONFIG,
   {
