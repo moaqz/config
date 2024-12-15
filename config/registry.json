@@ -1,8 +1,23 @@
 {
   "lefthook": {
-    "files": ["lefthook.toml"],
+    "files": [
+      "lefthook.toml"
+    ],
     "dependencies": {
       "lefthook": "^1.9.0"
+    }
+  },
+  "linter": {
+    "files": [
+      "eslint.config.js"
+    ],
+    "dependencies": {
+      "eslint": "^9.17.0",
+      "eslint-config-moaqz": "^0.1.0"
+    },
+    "scripts": {
+      "lint": "eslint .",
+      "lint:fix": "eslint . --fix"
     }
   }
 }
