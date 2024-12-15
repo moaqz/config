@@ -13,6 +13,7 @@ function getArgs() {
     help: { type: "boolean", short: "h" },
     version: { type: "boolean", short: "v" },
     githooks: { type: "boolean" },
+    linter: { type: "boolean" }
   };
 
   let args;
@@ -32,6 +33,7 @@ function getArgs() {
     help: Boolean(noParams || options.help),
     version: Boolean(totalArgs === 1 && options.version),
     githooks: isCommand && positionals.includes("githooks"),
+    linter: isCommand && positionals.includes("linter"),
   };
 }
 
@@ -45,16 +47,17 @@ const parsedArgs = getArgs();
 
 if (parsedArgs.help) {
   console.log(
-    `${styleText("green", `moaqz-tools:${VERSION}`)} - by moaqz (${styleText("magenta", "https://github.com/moaqz")})\n`,
+    `${styleText("green", `moaqz-tools:${VERSION}`)} - by moaqz (${styleText("magenta", "https://github.com/moaqz")})\n`
   );
 
   console.log(
-    `Usage: moaqz-tools [options] [command]\n\n` +
-      `Options:\n` +
-      `  -h, --help         Show this help message\n` +
-      `  -v, --version      Show version information\n` +
-      `\nCommands:\n` +
-      `  githooks           Configure Git hooks using Lefthook\n`,
+    "Usage: moaqz-tools [options] [command]\n\n" +
+    "Options:\n" +
+    "  -h, --help         Show this help message\n" +
+    "  -v, --version      Show version information\n" +
+    "\nCommands:\n" +
+    "  githooks           Configure Git hooks using Lefthook\n" +
+    "  linter             Set up and configure ESLint\n"
   );
 
   process.exit(0);
@@ -124,9 +127,12 @@ function writeFile(filename, data) {
   writeFileSync(file, data, { encoding: "utf8" });
 }
 
-if (parsedArgs.githooks) {
+/**
+ * @param {string} name
+ */
+async function installFromRegistry(name) {
   console.log(styleText("yellow", "[1/3] Fetching registry configuration..."));
-  const registry = (await getRegistry())["lefthook"];
+  const registry = (await getRegistry())[name];
 
   console.log(styleText("yellow", "[2/3] Updating package.json..."));
   const pkgJSON = readPackageJSON();
@@ -136,6 +142,10 @@ if (parsedArgs.githooks) {
       ...registry.dependencies,
       ...pkgJSON.devDependencies,
     },
+    scripts: {
+      ...registry.scripts,
+      ...pkgJSON.scripts,
+    }
   };
 
   writeFile("package.json", JSON.stringify(updatedPkgJSON, null, 2));
@@ -145,13 +155,24 @@ if (parsedArgs.githooks) {
     const fileContent = await getRegistryFile(file);
     writeFile(file, fileContent);
   }
+}
+
+if (parsedArgs.githooks) {
+  await installFromRegistry("lefthook");
 
   console.log(
     styleText(
       "green",
       "[DONE] Run the following commands to complete the setup:\n\n" +
-        "  pnpm install\n" +
-        "  pnpm lefthook install\n",
-    ),
+      "  pnpm install\n" +
+      "  pnpm lefthook install\n"
+    )
+  );
+}
+
+if (parsedArgs.linter) {
+  await installFromRegistry("linter");
+  console.log(
+    styleText("green", "[DONE] Linter setup is complete!")
   );
 }
