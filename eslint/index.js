@@ -10,6 +10,7 @@ const STYLISTIC_RULES = {
   "@stylistic/quotes": ["error", "double"],
   "@stylistic/semi": ["error", "always"],
   "@stylistic/quote-props": ["error", "consistent"],
+  "@stylistic/space-before-function-paren": "off"
 };
 
 /**
@@ -71,7 +72,8 @@ const HTML_CONFIG = {
   },
   rules: {
     ...html.configs["flat/recommended"].rules,
-    "@html-eslint/indent": ["error", 2],
+    "@html-eslint/indent": "off",
+    "@html-eslint/attrs-newline": "off",
     "@html-eslint/no-inline-styles": "error",
     "@html-eslint/no-target-blank": "error",
     "@html-eslint/require-attrs": [
