@@ -1,0 +1,82 @@
+// Last update 2024-12-19
+{
+  // ========== Visuals ==========
+  "editor.fontFamily": "CaskaydiaCove Nerd Font",
+  "editor.fontLigatures": false,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.tree.indent": 15,
+  "workbench.startupEditor": "none",
+  "editor.renderWhitespace": "none",
+  "workbench.colorTheme": "Atom One Dark",
+  "workbench.iconTheme": "file-icons",
+  "workbench.list.smoothScrolling": true,
+  "workbench.productIconTheme": "icons-carbon",
+  "workbench.activityBar.location": "bottom",
+  "workbench.layoutControl.enabled": false,
+  "editor.fontSize": 16,
+  "window.commandCenter": false,
+  "window.menuBarVisibility": "hidden",
+  "editor.guides.bracketPairs": "active",
+  "editor.minimap.enabled": false,
+  // ========== Editor ========== 
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.inlineSuggest.enabled": true,
+  "editor.tabSize": 2,
+  "editor.unicodeHighlight.invisibleCharacters": true,
+  "editor.stickyScroll.enabled": true,
+  "editor.hover.sticky": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "never",
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
+  },
+  "files.insertFinalNewline": true,
+  "git.confirmSync": false,
+  "git.blame.editorDecoration.enabled": true,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "search.exclude": {
+    "**/*.snap": true,
+    "**/*.svg": true,
+    "**/.git": true,
+    "**/.github": false,
+    "**/.nuxt": true,
+    "**/.output": true,
+    "**/.pnpm": true,
+    "**/.vscode": true,
+    "**/.yarn": true,
+    "**/assets": true,
+    "**/bower_components": true,
+    "**/dist/**": true,
+    "**/logs": true,
+    "**/node_modules": true,
+    "**/out/**": true,
+    "**/package-lock.json": true,
+    "**/pnpm-lock.yaml": true,
+    "**/public": true,
+    "**/temp": true,
+    "**/yarn.lock": true,
+    "**/CHANGELOG*": true,
+    "**/LICENSE*": true
+  },
+
+  // ========== ESLint ========== 
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml",
+    "toml"
+  ],
+  "eslint.quiet": true
+}

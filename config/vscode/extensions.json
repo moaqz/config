@@ -1,0 +1,20 @@
+{
+  "recommendations": [
+    // ========== Themes and Icons ========== 
+    "akamud.vscode-theme-onedark",
+    "antfu.icons-carbon",
+    "file-icons.file-icons",
+
+    // ========== Linters ========== 
+    "charliermarsh.ruff",
+    "dbaeumer.vscode-eslint",
+    "usernamehw.errorlens",
+
+    // ========== Languages ========== 
+    "ms-python.python",
+    "tamasfe.even-better-toml",
+    "redhat.vscode-yaml",
+    "astro-build.astro-vscode",
+    "Vue.volar"
+  ]
+}
