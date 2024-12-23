@@ -1,4 +1,4 @@
-// Last update 2024-12-20
+// Last update 2024-12-23
 {
   // ========== Visuals ==========
   "editor.fontFamily": "CaskaydiaCove Nerd Font",
@@ -19,6 +19,7 @@
   "window.menuBarVisibility": "hidden",
   "editor.guides.bracketPairs": "active",
   "editor.minimap.enabled": false,
+  
   // ========== Editor ========== 
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.inlineSuggest.enabled": true,
@@ -62,6 +63,7 @@
   },
   "files.autoSave": "afterDelay",
   "html.autoClosingTags": true,
+  "js/ts.implicitProjectConfig.checkJs": true,
 
   // ========== ESLint ========== 
   "eslint.codeAction.showDocumentation": {
