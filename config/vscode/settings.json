@@ -1,15 +1,12 @@
-// Last update 2024-12-23
+// Last update 2025-01-22
 {
   // ========== Visuals ==========
   "editor.fontFamily": "CaskaydiaCove Nerd Font",
   "editor.fontLigatures": false,
   "editor.cursorSmoothCaretAnimation": "on",
-  "workbench.tree.renderIndentGuides": "always",
-  "workbench.tree.indent": 15,
   "workbench.startupEditor": "none",
   "editor.renderWhitespace": "none",
   "workbench.colorTheme": "Atom One Dark",
-  "workbench.iconTheme": "file-icons",
   "workbench.list.smoothScrolling": true,
   "workbench.productIconTheme": "icons-carbon",
   "workbench.activityBar.location": "bottom",
@@ -21,7 +18,7 @@
   "editor.minimap.enabled": false,
   
   // ========== Editor ========== 
-  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.ignoreTrimWhitespace": true,
   "editor.inlineSuggest.enabled": true,
   "editor.tabSize": 2,
   "editor.unicodeHighlight.invisibleCharacters": true,
@@ -63,7 +60,18 @@
   },
   "files.autoSave": "afterDelay",
   "html.autoClosingTags": true,
-  "js/ts.implicitProjectConfig.checkJs": true,
+  "emmet.includeLanguages": {
+    "javascript": "html" // <-- required to work with webcomponents
+  },
+  "breadcrumbs.enabled": false,
+
+  // ========== Sidebar configuration ==========
+  "workbench.iconTheme": "material-icon-theme",
+  "material-icon-theme.hidesExplorerArrows": true,
+  "workbench.tree.enableStickyScroll": false,
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.tree.indent": 8,
+  "explorer.compactFolders": false,
 
   // ========== ESLint ========== 
   "eslint.codeAction.showDocumentation": {
