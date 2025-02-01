@@ -9,8 +9,6 @@
   "workbench.colorTheme": "Atom One Dark",
   "workbench.list.smoothScrolling": true,
   "workbench.productIconTheme": "icons-carbon",
-  "workbench.activityBar.location": "bottom",
-  "workbench.layoutControl.enabled": false,
   "editor.fontSize": 16,
   "window.commandCenter": false,
   "window.menuBarVisibility": "hidden",
@@ -64,6 +62,9 @@
     "javascript": "html" // <-- required to work with webcomponents
   },
   "breadcrumbs.enabled": false,
+  "workbench.activityBar.location": "bottom",
+  "workbench.editor.editorActionsLocation": "hidden",
+  "editor.linkedEditing": true,
 
   // ========== Sidebar configuration ==========
   "workbench.iconTheme": "material-icon-theme",
