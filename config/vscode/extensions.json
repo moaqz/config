@@ -3,7 +3,7 @@
     // ========== Themes and Icons ========== 
     "akamud.vscode-theme-onedark",
     "antfu.icons-carbon",
-    "PKief.material-icon-theme",
+    "miguelsolorio.symbols",
 
     // ========== Linters ========== 
     "charliermarsh.ruff",

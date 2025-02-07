@@ -1,14 +1,13 @@
-// Last update 2025-01-22
+// Last update 2025-02-06
 {
   // ========== Visuals ==========
   "editor.fontFamily": "CaskaydiaCove Nerd Font",
+  "workbench.colorTheme": "Atom One Dark",
   "editor.fontLigatures": false,
   "editor.cursorSmoothCaretAnimation": "on",
   "workbench.startupEditor": "none",
   "editor.renderWhitespace": "none",
-  "workbench.colorTheme": "Atom One Dark",
   "workbench.list.smoothScrolling": true,
-  "workbench.productIconTheme": "icons-carbon",
   "editor.fontSize": 16,
   "window.commandCenter": false,
   "window.menuBarVisibility": "hidden",
@@ -67,12 +66,13 @@
   "editor.linkedEditing": true,
 
   // ========== Sidebar configuration ==========
-  "workbench.iconTheme": "material-icon-theme",
-  "material-icon-theme.hidesExplorerArrows": true,
+  "workbench.iconTheme": "symbols",
   "workbench.tree.enableStickyScroll": false,
   "workbench.tree.renderIndentGuides": "none",
   "workbench.tree.indent": 8,
   "explorer.compactFolders": false,
+  "workbench.productIconTheme": "icons-carbon",
+  "symbols.hidesExplorerArrows": true,
 
   // ========== ESLint ========== 
   "eslint.codeAction.showDocumentation": {
@@ -91,5 +91,10 @@
     "yaml",
     "toml"
   ],
-  "eslint.quiet": true
+  "eslint.quiet": true,
+
+  /* Formatters */
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
+  }
 }
