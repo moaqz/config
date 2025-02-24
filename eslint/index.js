@@ -10,7 +10,8 @@ const STYLISTIC_RULES = {
   "@stylistic/quotes": ["error", "double"],
   "@stylistic/semi": ["error", "always"],
   "@stylistic/quote-props": ["error", "consistent"],
-  "@stylistic/space-before-function-paren": "off"
+  "@stylistic/space-before-function-paren": "off",
+  "@stylistic/jsx-quotes": ["error", "prefer-double"],
 };
 
 /**
