@@ -1,21 +1,14 @@
-This repository stores all my configuration files, making it easy to copy settings between projects.
+This project stores all my configuration files and utilities to make it easy to copy settings between projects. It’s organized into directories, each serving a different purpose:
 
-## What’s Inside?
+- **`config`**: Contains configuration files such as VSCode settings or ESLint configs. It also includes a registry.json file, which lists the dependencies required to install and use each configuration.
 
-- A **registry** (`config/registry.json`) that links all configurations and their dependencies, like ESLint.
-- A **CLI tool** you can install to manage and apply configurations quickly.
+- **`cli`**: A utility tool that reads from registry.json, installs the necessary dependencies, and copies the configuration files where needed.
 
-## Motivation
+- **`eslint`**: My personal ESLint configuration, exported as an npm package.
 
-I wanted an easy way to:
-
-- Keep all my configurations in one place.
-- Copy and apply settings across different projects.
-- Save time when setting up new environments.
-
-# How to Install
+## How to install the CLI
 
 ```sh
-sudo curl -s https://raw.githubusercontent.com/moaqz/config/main/src/index.js -o /usr/local/bin/moaqz-config
+sudo curl -s https://raw.githubusercontent.com/moaqz/config/main/cli/index.js -o /usr/local/bin/moaqz-config
 sudo chmod ugo+rx /usr/local/bin/moaqz-config
 ```
