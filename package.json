@@ -9,6 +9,7 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "inspect": "eslint-config-inspector"
+    "inspect": "eslint-config-inspector",
+    "build:inspector": "eslint-config-inspector build"
   }
 }
