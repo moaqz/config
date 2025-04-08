@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable no-console */
 
 import process from "node:process";
 import { parseArgs, styleText } from "node:util";
