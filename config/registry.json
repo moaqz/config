@@ -1,5 +1,5 @@
 {
-  "lefthook": {
+  "githooks": {
     "files": [
       "lefthook.toml"
     ],
@@ -19,5 +19,11 @@
       "lint": "eslint .",
       "lint:fix": "eslint . --fix"
     }
+  },
+  "vscode": {
+    "files": [
+      ".vscode/settings.json",
+      ".vscode/extensions.json"
+    ]
   }
 }
