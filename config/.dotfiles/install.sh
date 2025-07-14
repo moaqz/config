@@ -2,10 +2,8 @@
 
 sudo apt update -y
 sudo apt install -y bash sudo wget git locales build-essential \
-  vim less catimg tldr curl man htop \
+  vim less catimg curl man htop \
   unzip zip bzip2 woff2 file
-
-tldr -u
 
 # Node
 curl -fsSL https://get.pnpm.io/install.sh | bash
