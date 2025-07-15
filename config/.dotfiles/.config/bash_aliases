@@ -1,0 +1,15 @@
+# Builtin.
+
+alias grep="grep --color=auto"
+alias ls="ls --color=auto"
+
+# Git.
+
+alias gc="git commit -m"
+alias gl="git log --stat --relative-date"
+alias ga="git add"
+
+# Others.
+
+alias py="python3"
+alias cat="batcat"
