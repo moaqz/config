@@ -1,14 +1,17 @@
-This project stores all my configuration files and utilities to make it easy to copy settings between projects. It’s organized into directories, each serving a different purpose:
+## What's Inside?
 
-- **`config`**: Contains configuration files such as VSCode settings or ESLint configs. It also includes a registry.json file, which lists the dependencies required to install and use each configuration.
+The project is organized into directories, each serving a specific purpose:
 
-- **`cli`**: A utility tool that reads from registry.json, installs the necessary dependencies, and copies the configuration files where needed.
+- **`.dotfiles/`**: Contains essential configuration files (`dotfiles`) tailored to my Debian system.
 
-- **`eslint`**: My personal ESLint configuration, exported as an npm package.
+- **`packages/`**:
+  - **`eslint-config-moaqz`**: My personal ESLint configuration. You can see a list of all included rules [Here](https://moaqz-eslint-config.vercel.app/).
+  - **`registry`**: Holds a collection of common development packages, their dependencies, and associated scripts.
+  - **`cli`**: A command-line utility that reads the `registry`. It automates the process of installing necessary dependencies and copying configuration files to their respective locations simplifying project setup.
 
-## How to install the CLI
+## Quick Start: Install the CLI
 
 ```sh
-sudo curl -s https://raw.githubusercontent.com/moaqz/config/main/cli/index.js -o /usr/local/bin/moaqz-config
+sudo curl -s https://raw.githubusercontent.com/moaqz/config/main/packages/cli/cli.js -o /usr/local/bin/moaqz-config
 sudo chmod ugo+rx /usr/local/bin/moaqz-config
 ```
