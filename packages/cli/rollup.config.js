@@ -1,9 +1,9 @@
 import nodeResolve from "@rollup/plugin-node-resolve";
 
 export default {
-  input: "cli/cli.js",
+  input: "cli.js",
   output: {
-    file: "cli/index.js",
+    file: "index.js",
     format: "es",
     compact: true,
   },

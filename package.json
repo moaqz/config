@@ -1,20 +1,16 @@
 {
   "name": "@moaqz/config",
-  "version": "0.2.0",
   "type": "module",
   "devDependencies": {
     "@eslint/config-inspector": "^1.1.0",
-    "@rollup/plugin-node-resolve": "^16.0.1",
-    "citty": "^0.1.6",
     "eslint": "^9.28.0",
-    "eslint-config-moaqz": "^0.3.0",
-    "rollup": "^4.42.0"
+    "eslint-config-moaqz": "^0.3.0"
   },
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "inspect": "eslint-config-inspector",
     "build:inspector": "eslint-config-inspector build",
-    "build": "rollup -c"
+    "build:cli": "pnpm --filter @moaqzdev/cli build"
   }
 }

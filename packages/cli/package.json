@@ -1,0 +1,15 @@
+{
+  "name": "@moaqzdev/cli",
+  "type": "module",
+  "author": "moaqz",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "citty": "^0.1.6",
+    "rollup": "^4.42.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "build": "rollup -c"
+  }
+}

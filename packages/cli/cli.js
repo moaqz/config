@@ -10,7 +10,7 @@ const REGISTRY = {
   /**
    * https://raw.githubusercontent.com/{user}/{repo}/{branch}/{path}
    */
-  url: "https://raw.githubusercontent.com/moaqz/config/main/config",
+  url: "https://raw.githubusercontent.com/moaqz/config/main/packages/registery",
   file: "registry.json",
 };
 
