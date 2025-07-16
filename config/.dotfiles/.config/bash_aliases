@@ -1,15 +1,21 @@
-# Builtin.
+# Builtin
 
 alias grep="grep --color=auto"
 alias ls="ls --color=auto"
 
-# Git.
+# Node
+
+alias node-lts="pnpm env use --global lts"
+alias node-ls="pnpm env list --remote | sort -Vr | less"
+alias node-install="pnpm env use"
+
+# Git
 
 alias gc="git commit -m"
 alias gl="git log --stat --relative-date"
 alias ga="git add"
 
-# Others.
+# Others
 
 alias py="python3"
 alias cat="batcat"
