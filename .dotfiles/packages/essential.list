@@ -1,0 +1,11 @@
+build-essential
+locales
+wget
+curl
+vim
+zip
+unzip
+file
+sudo
+less
+man
