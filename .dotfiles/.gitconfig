@@ -1,0 +1,7 @@
+[user]
+	# email = <email>
+	name = moaqz
+[init]
+	defaultBranch = main
+[core]
+	editor = vi
