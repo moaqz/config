@@ -12,6 +12,6 @@ The project is organized into directories, each serving a specific purpose:
 ## Quick Start: Install the CLI
 
 ```sh
-sudo curl -s https://raw.githubusercontent.com/moaqz/config/main/packages/cli/cli.js -o /usr/local/bin/moaqz-config
+sudo curl -s https://raw.githubusercontent.com/moaqz/config/main/packages/cli/index.js -o /usr/local/bin/moaqz-config
 sudo chmod ugo+rx /usr/local/bin/moaqz-config
 ```
