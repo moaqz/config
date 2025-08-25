@@ -1,0 +1,18 @@
+#!/bin/bash
+
+function install_packages() {
+    local PACKAGES
+    readarray -t PACKAGES < <(cat .dotfiles/packages/*.list)
+
+    if [ ${#PACKAGES[@]} -eq 0 ]; then
+        echo "No se encontraron paquetes"
+        return 1
+    fi
+
+    echo "Instalando ${#packages[@]} paquetes..."
+
+    sudo apt-get update
+    sudo apt-get install -y ${PACKAGES[@]}
+}
+
+install_packages
