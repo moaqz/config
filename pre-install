@@ -18,7 +18,7 @@ function install_packages() {
 function copy_dotfiles() {
     while read -r LINE; do
         local src="${LINE%%:*}"
-        local dest="${LINE##*:}"
+        local dest="${HOME}/${LINE##*:}"
 
         if [ -d "${src}" ]; then
             echo "Copiando directorio: ${src} → ${dest}"
