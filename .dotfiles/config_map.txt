@@ -1,0 +1,4 @@
+.dotfiles/.profile:.profile
+.dotfiles/.bashrc:.bashrc
+.dotfiles/.gitconfig:.gitconfig
+.dotfiles/.config:.config

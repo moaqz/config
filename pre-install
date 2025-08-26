@@ -9,10 +9,26 @@ function install_packages() {
         return 1
     fi
 
-    echo "Instalando ${#packages[@]} paquetes..."
+    echo "Instalando ${#PACKAGES[@]} paquetes..."
 
     sudo apt-get update
-    sudo apt-get install -y ${PACKAGES[@]}
+    sudo apt-get install -y "${PACKAGES[@]}"
+}
+
+function copy_dotfiles() {
+    while read -r LINE; do
+        local src="${LINE%%:*}"
+        local dest="${LINE##*:}"
+
+        if [ -d "${src}" ]; then
+            echo "Copiando directorio: ${src} → ${dest}"
+            cp -r "${src}" "${dest}"
+        else
+            echo "Copiando archivo: ${src} → ${dest}"
+            mkdir -p "$(dirname "${dest}")" && cp "${src}" "${dest}"
+        fi
+    done < ".dotfiles/config_map.txt"
 }
 
 install_packages
+copy_dotfiles
